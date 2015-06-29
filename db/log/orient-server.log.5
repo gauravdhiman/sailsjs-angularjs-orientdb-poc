@@ -1,0 +1,105 @@
+
+2015-06-18 02:42:04:884 INFO  OrientDB auto-config DISKCACHE=3,438MB (heap=455MB os=5,941MB disk=138,967MB) [orientechnologies]
+2015-06-18 02:42:04:918 INFO  Loading configuration from: E:/Downloads/orientdb-community-2.0.10/config/orientdb-server-config.xml... [OServerConfigurationLoaderXml]
+2015-06-18 02:42:06:402 INFO  OrientDB Server v2.0.10 (build UNKNOWN@r${buildNumber}; 2015-05-25 16:48:43+0000) is starting up... [OServer]
+2015-06-18 02:42:06:486 INFO  Databases directory: E:\Downloads\orientdb-community-2.0.10\databases [OServer]
+2015-06-18 02:42:06:809 INFO  Listening binary connections on 0.0.0.0:2424 (protocol v.28, socket=default) [OServerNetworkListener]
+2015-06-18 02:42:06:828 INFO  Listening http connections on 0.0.0.0:2480 (protocol v.10, socket=default) [OServerNetworkListener]
+2015-06-18 02:42:06:899 INFO  Installing dynamic plugin 'orientdb-lucene-2.0.10-dist.jar'... [OServerPluginManager]
+2015-06-18 02:42:07:153 INFO  Lucene index plugin installed and active. Lucene version: LUCENE_47 [OLuceneIndexPlugin]
+2015-06-18 02:42:07:155 INFO  Installing dynamic plugin 'studio-2.0.zip'... [OServerPluginManager]
+2015-06-18 02:42:07:283 INFO  Installing GREMLIN language v.2.6.0 - graph.pool.max=50 [OGraphServerHandler]
+2015-06-18 02:42:07:285 INFO  [OVariableParser.resolveVariables] Error on resolving property: distributed [orientechnologies]
+2015-06-18 02:42:07:295 INFO  Installing Script interpreter. WARN: authenticated clients can execute any kind of code into the server by using the following allowed languages: [sql] [OServerSideScriptInterpreter]
+2015-06-18 02:42:07:296 INFO  OrientDB Server v2.0.10 is active. [OServer]Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:55338: java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+java.lang.IllegalArgumentException: Fetch plan '= 'additionalImages:1'' is invalid
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.checkFetchPlanValid(OFetchHelper.java:88)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.setFetchPlan(OQueryAbstract.java:47)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parseFetchplan(OCommandExecutorSQLSelect.java:972)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:251)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:96)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:56)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:37)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1181)
+	at com.orientechnologies.orient.core.command.OCommandRequestTextAbstract.execute(OCommandRequestTextAbstract.java:63)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+
+2015-06-18 03:04:22:674 INFO  Received signal: SIGINT [OSignalHandler]

@@ -1,0 +1,60 @@
+
+2015-06-26 22:52:25:778 INFO  OrientDB auto-config DISKCACHE=3,438MB (heap=455MB os=5,941MB disk=138,852MB) [orientechnologies]
+2015-06-26 22:52:25:785 INFO  Loading configuration from: E:/Node/AustraliaCompanyAssignment/ClassProj/db/config/orientdb-server-config.xml... [OServerConfigurationLoaderXml]
+2015-06-26 22:52:26:060 INFO  OrientDB Server v2.0.10 (build UNKNOWN@r${buildNumber}; 2015-05-25 16:48:43+0000) is starting up... [OServer]
+2015-06-26 22:52:26:100 INFO  Databases directory: E:\Node\AustraliaCompanyAssignment\ClassProj\db\databases [OServer]
+2015-06-26 22:52:26:152 INFO  Listening binary connections on 0.0.0.0:2424 (protocol v.28, socket=default) [OServerNetworkListener]
+2015-06-26 22:52:26:154 INFO  Listening http connections on 0.0.0.0:2480 (protocol v.10, socket=default) [OServerNetworkListener]
+2015-06-26 22:52:26:190 INFO  Installing dynamic plugin 'orientdb-lucene-2.0.10-dist.jar'... [OServerPluginManager]
+2015-06-26 22:52:26:312 INFO  Lucene index plugin installed and active. Lucene version: LUCENE_47 [OLuceneIndexPlugin]
+2015-06-26 22:52:26:314 INFO  Installing dynamic plugin 'studio-2.0.zip'... [OServerPluginManager]
+2015-06-26 22:52:26:346 INFO  Installing GREMLIN language v.2.6.0 - graph.pool.max=50 [OGraphServerHandler]
+2015-06-26 22:52:26:347 INFO  [OVariableParser.resolveVariables] Error on resolving property: distributed [orientechnologies]
+2015-06-26 22:52:26:349 INFO  Installing Script interpreter. WARN: authenticated clients can execute any kind of code into the server by using the following allowed languages: [sql] [OServerSideScriptInterpreter]
+2015-06-26 22:52:26:349 INFO  OrientDB Server v2.0.10 is active. [OServer]
+2015-06-26 22:53:19:618 INFO  Creating database plocal:E:/Node/AustraliaCompanyAssignment/ClassProj/db/databases/pocdb [OServerCommandPostDatabase]
+2015-06-28 02:16:22:405 WARNING Session OS1435437783956-5862417797564647790 is trying to access to the database 'pocdb', but has been authenticated against the database 'fsdb' [OServerCommandGetDatabase]
+2015-06-28 13:25:24:728 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query at position #10: Error on parsing query
+Query:  startDate class
+---------------^
+--> com.orientechnologies.orient.core.exception.OCommandExecutionException: Class 'STARTDATE' was not found in current database [ONetworkProtocolHttpDb]
+2015-06-28 13:47:30:235 SEVERE Internal server error:
+java.lang.ClassCastException: java.util.Date cannot be cast to java.lang.String [ONetworkProtocolHttpDb]Sent run-time exception to the client /127.0.0.1:65448: com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+	at com.orientechnologies.orient.server.OServer.serverLogin(OServer.java:437)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.connect(ONetworkProtocolBinary.java:693)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:275)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:65478: com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+	at com.orientechnologies.orient.server.OServer.serverLogin(OServer.java:437)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.connect(ONetworkProtocolBinary.java:693)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:275)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+
+2015-06-28 14:07:47:536 SEVERE Internal server error:
+java.lang.IllegalArgumentException: Cannot change property type from DATE to STRING [ONetworkProtocolHttpDb]
+2015-06-28 14:08:00:974 SEVERE Internal server error:
+java.lang.IllegalArgumentException: Cannot change property type from DATE to STRING [ONetworkProtocolHttpDb]
+2015-06-28 14:11:03:408 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OSchemaException: The database contains some schema-less data in the property 'Class.startDate' that is not compatible with the type STRING. Fix those records and change the schema again [ONetworkProtocolHttpDb]
+2015-06-28 14:11:39:939 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OSchemaException: The database contains some schema-less data in the property 'Class.startDate' that is not compatible with the type STRING. Fix those records and change the schema again [ONetworkProtocolHttpDb]
+2015-06-28 14:25:10:859 SEVERE Internal server error:
+java.lang.IllegalArgumentException: Cannot change property type from STRING to DATE [ONetworkProtocolHttpDb]
+2015-06-28 14:25:35:835 SEVERE Internal server error:
+java.lang.IllegalArgumentException: Cannot change property type from STRING to INTEGER [ONetworkProtocolHttpDb]
+2015-06-28 14:26:15:768 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OSchemaException: The database contains some schema-less data in the property 'Class.maxStudentCount' that is not compatible with the type INTEGER. Fix those records and change the schema again [ONetworkProtocolHttpDb]
+2015-06-29 08:47:14:905 WARNING Session OS14355472332883749647823459531920 is trying to access to the database 'fsdb', but has been authenticated against the database 'pocdb' [OServerCommandGetDatabase]
+2015-06-29 08:48:09:897 WARNING Session OS14355478374853078413241928468344 is trying to access to the database 'pocdb', but has been authenticated against the database 'fsdb' [OServerCommandGetSupportedLanguages]
+2015-06-29 11:07:57:176 INFO  Received signal: SIGINT [OSignalHandler]
+2015-06-29 11:07:57:211 INFO  OrientDB Server is shutting down... [OServer]
+2015-06-29 11:07:57:212 INFO  Shutting down listeners: [OServer]
+2015-06-29 11:07:57:213 INFO  - ONetworkProtocolBinary /0.0.0.0:2424: [OServer]
+2015-06-29 11:07:57:214 INFO  - ONetworkProtocolHttpDb /0.0.0.0:2480: [OServer]
+2015-06-29 11:07:57:215 INFO  Shutting down protocols [OServer]
+2015-06-29 11:07:57:217 INFO  Shutting down plugins: [OServerPluginManager]

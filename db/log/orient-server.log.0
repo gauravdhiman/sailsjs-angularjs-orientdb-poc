@@ -1,0 +1,107 @@
+
+2015-06-29 22:19:19:350 INFO  OrientDB auto-config DISKCACHE=3,438MB (heap=455MB os=5,941MB disk=138,825MB) [orientechnologies]
+2015-06-29 22:19:19:356 INFO  Loading configuration from: E:/Node/AustraliaCompanyAssignment/ClassProj/db/config/orientdb-server-config.xml... [OServerConfigurationLoaderXml]
+2015-06-29 22:19:19:597 INFO  OrientDB Server v2.0.10 (build UNKNOWN@r${buildNumber}; 2015-05-25 16:48:43+0000) is starting up... [OServer]
+2015-06-29 22:19:19:626 INFO  Databases directory: E:\Node\AustraliaCompanyAssignment\ClassProj\db\databases [OServer]
+2015-06-29 22:19:19:677 INFO  Listening binary connections on 0.0.0.0:2424 (protocol v.28, socket=default) [OServerNetworkListener]
+2015-06-29 22:19:19:679 INFO  Listening http connections on 0.0.0.0:2480 (protocol v.10, socket=default) [OServerNetworkListener]
+2015-06-29 22:19:19:699 INFO  Installing dynamic plugin 'orientdb-lucene-2.0.10-dist.jar'... [OServerPluginManager]
+2015-06-29 22:19:19:957 INFO  Lucene index plugin installed and active. Lucene version: LUCENE_47 [OLuceneIndexPlugin]
+2015-06-29 22:19:19:960 INFO  Installing dynamic plugin 'studio-2.0.zip'... [OServerPluginManager]
+2015-06-29 22:19:19:979 INFO  Installing GREMLIN language v.2.6.0 - graph.pool.max=50 [OGraphServerHandler]
+2015-06-29 22:19:19:980 INFO  [OVariableParser.resolveVariables] Error on resolving property: distributed [orientechnologies]
+2015-06-29 22:19:19:985 INFO  Installing Script interpreter. WARN: authenticated clients can execute any kind of code into the server by using the following allowed languages: [sql] [OServerSideScriptInterpreter]
+2015-06-29 22:19:19:986 INFO  OrientDB Server v2.0.10 is active. [OServer]{db=pocdb} Fetching error on record #10:3
+java.lang.NullPointerException
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchCollectionRidMap(OFetchHelper.java:205)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchRidMap(OFetchHelper.java:180)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.processRecordRidMap(OFetchHelper.java:162)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetch(OFetchHelper.java:70)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener.fetchRecord(OAbstractCommandResultListener.java:54)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAsyncCommandResultListener.result(OAsyncCommandResultListener.java:61)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.addResult(OCommandExecutorSQLSelect.java:621)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.handleResult(OCommandExecutorSQLSelect.java:543)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearchRecord(OCommandExecutorSQLSelect.java:503)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.fetchFromTarget(OCommandExecutorSQLSelect.java:1309)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearch(OCommandExecutorSQLSelect.java:433)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.execute(OCommandExecutorSQLSelect.java:391)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.execute(OCommandExecutorSQLDelegate.java:64)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.executeCommand(OAbstractPaginatedStorage.java:1194)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1183)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:71)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:33)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+{db=pocdb} Fetching error on record #10:5
+java.lang.NullPointerException
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchCollectionRidMap(OFetchHelper.java:205)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchRidMap(OFetchHelper.java:180)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.processRecordRidMap(OFetchHelper.java:162)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetch(OFetchHelper.java:70)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener.fetchRecord(OAbstractCommandResultListener.java:54)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAsyncCommandResultListener.result(OAsyncCommandResultListener.java:61)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.addResult(OCommandExecutorSQLSelect.java:621)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.handleResult(OCommandExecutorSQLSelect.java:543)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearchRecord(OCommandExecutorSQLSelect.java:503)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.fetchFromTarget(OCommandExecutorSQLSelect.java:1309)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearch(OCommandExecutorSQLSelect.java:433)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.execute(OCommandExecutorSQLSelect.java:391)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.execute(OCommandExecutorSQLDelegate.java:64)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.executeCommand(OAbstractPaginatedStorage.java:1194)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1183)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:71)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:33)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+{db=pocdb} Fetching error on record #10:5
+java.lang.NullPointerException
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchCollectionRidMap(OFetchHelper.java:205)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchRidMap(OFetchHelper.java:180)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.processRecordRidMap(OFetchHelper.java:162)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetch(OFetchHelper.java:70)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener.fetchRecord(OAbstractCommandResultListener.java:54)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAsyncCommandResultListener.result(OAsyncCommandResultListener.java:61)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.addResult(OCommandExecutorSQLSelect.java:621)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.handleResult(OCommandExecutorSQLSelect.java:543)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearchRecord(OCommandExecutorSQLSelect.java:503)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.fetchFromTarget(OCommandExecutorSQLSelect.java:1309)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearch(OCommandExecutorSQLSelect.java:433)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.execute(OCommandExecutorSQLSelect.java:391)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.execute(OCommandExecutorSQLDelegate.java:64)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.executeCommand(OAbstractPaginatedStorage.java:1194)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1183)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:71)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:33)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+{db=pocdb} Fetching error on record #10:5
+java.lang.NullPointerException
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchCollectionRidMap(OFetchHelper.java:205)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetchRidMap(OFetchHelper.java:180)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.processRecordRidMap(OFetchHelper.java:162)
+	at com.orientechnologies.orient.core.fetch.OFetchHelper.fetch(OFetchHelper.java:70)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener.fetchRecord(OAbstractCommandResultListener.java:54)
+	at com.orientechnologies.orient.server.network.protocol.binary.OAsyncCommandResultListener.result(OAsyncCommandResultListener.java:61)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.addResult(OCommandExecutorSQLSelect.java:621)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.handleResult(OCommandExecutorSQLSelect.java:543)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearchRecord(OCommandExecutorSQLSelect.java:503)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.fetchFromTarget(OCommandExecutorSQLSelect.java:1309)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.executeSearch(OCommandExecutorSQLSelect.java:433)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.execute(OCommandExecutorSQLSelect.java:391)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.execute(OCommandExecutorSQLDelegate.java:64)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.executeCommand(OAbstractPaginatedStorage.java:1194)
+	at com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage.command(OAbstractPaginatedStorage.java:1183)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:71)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:33)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.command(ONetworkProtocolBinary.java:1179)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:386)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:217)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+
+2015-06-30 01:46:08:940 INFO  Received signal: SIGINT [OSignalHandler]

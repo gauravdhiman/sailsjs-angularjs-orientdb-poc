@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Assignment: Class Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ng-bs3-datepicker.css" />
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body ng-controller="appCtrl">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="alert alert-{{data.notification.type}} alert-dismissable" ng-show="data.notification.show">
+				 <button type="button" class="close" aria-hidden="true" ng-click='hideNotification()'>×</button>
+         {{data.notification.message}}
+			</div>
+			<h3 class="text-left text-primary">
+				Classes
+			</h3>
+			<div class="row clearfix">
+				<div class="col-md-8 column">
+					<table class="table table-hover table-striped">
+						<thead>
+							<tr>
+								<th>
+									#
+								</th>
+								<th>
+									Class ID
+								</th>
+								<th>
+									Class Name
+								</th>
+								<th>
+									Starting Date
+								</th>
+                <th>
+									# of Students
+								</th>
+                <th>
+									Actions
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="class in data.classes">
+                <td>
+									{{$index + 1}}
+								</td>
+                <td>
+									{{class._id}}
+								</td>
+								<td>
+									{{class.name}}
+								</td>
+								<td>
+									{{class.startDate}}
+								</td>
+								<td>
+									{{class.maxStudentCount}}
+								</td>
+                <td>
+									<a href="" ng-click="showClassDetailsGrid(class._id)">View</a> / <a href="" ng-click="deleteClass(class._id)">Delete</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row clearfix">
+						<div class="col-md-12 column">
+							<div class="row clearfix">
+								<div class="col-md-6 column">
+									 <button type="button" class="btn btn-success btn-block" ng-click='showNewClassForm()'>New Class</button>
+								</div>
+								<div class="col-md-6 column">
+									 <button type="button" class="btn btn-block btn-warning" ng-click='showAddStudentForm()'>Add Student</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 column">
+          <div ng-show="rightComponent == 'New Class'">
+            <div  ng-controller='newClassFormCtrl'>
+              <div class="form-group pull-right">
+                <button class="btn btn-success" ng-disabled="!(addClassForm.$valid)" ng-click="addClass()">Add Class</button>
+              </div>
+              <h3>New Class</h3>
+              <form name="addClassForm" role="form">
+    						<div class="form-group">
+    							 <label>Class ID:</label>
+                   <input type="text" required class="form-control" ng-model="classObj._id">
+    						</div>
+    						<div class="form-group">
+    							 <label>Class Name:</label>
+                   <input type="text" required class="form-control" ng-model="classObj.name">
+    						</div>
+                <label>Maximum number of enrolls:</label>
+                <div class="input-group spinner">
+                  <input type="text" class="form-control" disabled value="{{classObj.maxStudentCount}}">
+                  <div class="input-group-btn-vertical">
+                    <button class="btn btn-default" type="button" ng-click='spinUp()'><i class="fa fa-caret-up"></i></button>
+                    <button class="btn btn-default" type="button" ng-click='spinDown()'><i class="fa fa-caret-down"></i></button>
+                  </div>
+                </div>
+                <label>Start Date:</label>
+                new Date: {{classObj.startDate}}
+                <ng-bs3-datepicker required ng-model="classObj.startDate" language="en" date-format="DD-MM-YYYY" />
+    					</form>
+            </div>
+          </div>
+          <div ng-show="rightComponent == 'Add Student'">
+            <div ng-controller='addStudentFormCtrl'>
+              <button class="btn btn-success pull-right" ng-click='addStudent()'>Add Student</button>
+              <h3>Add Student</h3>
+    					<form role="form">
+                {{students.length}}
+    						<div class="form-group">
+    							 <label>Student Name</label>
+                   <select class="form-control" ng-model="selectedStudentId" ng-options="student.id as student.name for student in data.students"></select>
+                   Student ID: {{selectedStudentId}}
+    						</div>
+                <div class="form-group">
+    							 <label>Class Name</label>
+                   <select class="form-control" ng-model="selectedClassId" ng-options="class._id as class.name for class in data.classes"></select>
+                   Class ID: {{selectedClassId}}
+    						</div>
+    					</form>
+            </div>
+          </div>
+          <div ng-show="rightComponent == 'Class Details'">
+            <div ng-controller="studentsOfClass">
+              <h2>{{data.selectedClass._id}}: {{data.selectedClass.name}}</h2>
+              <h4 ng-hide="data.selectedClass.students.length">No students are registered for this class.</h4>
+              <table class="table" ng-show="data.selectedClass.students.length">
+    						<thead>
+    							<tr>
+    								<th>
+    									#
+    								</th>
+    								<th>
+    									ID
+    								</th>
+    								<th>
+    									Student Name
+    								</th>
+    								<th>
+    									Erollment Date
+    								</th>
+                    <th>
+    									Actions
+    								</th>
+    							</tr>
+    						</thead>
+    						<tbody>
+                  <tr ng-repeat="student in data.selectedClass.students">
+    								<td>
+    									{{$index + 1}}
+    								</td>
+    								<td>
+    									{{student._id}}
+    								</td>
+    								<td>
+    									{{student.name}}
+    								</td>
+    								<td>
+    									{{student.enrollmentDate}}
+    								</td>
+                    <td>
+    									<a href="" ng-click="removeStudentFromClass(student._id, data.selectedClass._id)">Remove</a>
+    								</td>
+    							</tr>
+    						</tbody>
+    					</table>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="js/lib/moment/moment.min.js"></script>
+<script type="text/javascript" src="js/lib/angular/ng-bs3-datepicker.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/ng-app/controllers/app.js"></script>
+<script type="text/javascript" src="js/ng-app/services/app.js"></script>
+<script type="text/javascript" src="js/ng-app/controllers/main.js"></script>
+<script type="text/javascript" src="js/ng-app/controllers/new-class-form.js"></script>
+<script type="text/javascript" src="js/ng-app/controllers/add-student-form.js"></script>
+<script type="text/javascript" src="js/ng-app/controllers/students-of-class.js"></script>
+<script type="text/javascript">
+  angular.bootstrap(document, ['MyApp']);
+</script>
+</body>
+</html>
